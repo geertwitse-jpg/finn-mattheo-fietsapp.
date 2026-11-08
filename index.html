@@ -166,16 +166,18 @@ async function startSpecializedTelemetry(server){
     const req=await server.getPrimaryService(tcuUuid(1));
     specializedWriteChar=await req.getCharacteristic(tcuUuid(0x21));
     specializedReadChar=await req.getCharacteristic(tcuUuid(0x11));
-    const commandService=await server.getPrimaryService(tcuUuid(2));
-    specializedCommandChar=await commandService.getCharacteristic(tcuUuid(0x22));
     if(!specializedWriteChar.properties.writeWithoutResponse&&!specializedWriteChar.properties.write)throw new Error("De TCU1-aanvraagservice heeft geen ondersteunde schrijfmodus.");
     if(!specializedReadChar.properties.read)throw new Error("De TCU1-antwoordservice is niet leesbaar.");
-    if(!specializedCommandChar.properties.writeWithoutResponse&&!specializedCommandChar.properties.write)throw new Error("De ondersteuningsbediening is niet schrijfbaar.");
+    try{
+      const commandService=await server.getPrimaryService(tcuUuid(2));
+      specializedCommandChar=await commandService.getCharacteristic(tcuUuid(0x22));
+      if(!specializedCommandChar.properties.writeWithoutResponse&&!specializedCommandChar.properties.write)specializedCommandChar=null;
+    }catch(e){specializedCommandChar=null;console.debug("TCU1 bedieningsservice niet beschikbaar",e)}
     $("specializedState").textContent="TCU1 verbonden";$("specializedState").className="pill good";
     $("specializedMessage").textContent="TCU1 herkend. De app leest de beschikbare gegevens uit. Instellingen blijven beperkt tot de normale ondersteuningsstanden.";
-    $("assistControlState").textContent="Beschikbaar";$("assistControlState").className="pill good";
-    $("assistControlMessage").textContent="Normale ondersteuningsstanden zijn beschikbaar. Kies alleen wanneer je stilstaat.";
-    document.querySelectorAll("[data-assist-level]").forEach(b=>b.disabled=false);
+    $("assistControlState").textContent=specializedCommandChar?"Beschikbaar":"Alleen uitlezen";$("assistControlState").className=specializedCommandChar?"pill good":"pill";
+    $("assistControlMessage").textContent=specializedCommandChar?"Normale ondersteuningsstanden zijn beschikbaar. Kies alleen wanneer je stilstaat.":"De uitlezing werkt, maar de schrijfservice voor ondersteuningsstanden is niet beschikbaar.";
+    document.querySelectorAll("[data-assist-level]").forEach(b=>b.disabled=!specializedCommandChar);
     await pollTcu1();specializedPollTimer=setInterval(pollTcu1,7000);
   }catch(e){
     $("specializedState").textContent="Uitlezing niet gestart";$("specializedState").className="pill warn";
