@@ -131,7 +131,7 @@ function showLegacyMessage(input){
     if(channel===0||channel===1)value=Math.round(raw*1.1111);
     if(channel===5)value=raw/5+20;if(channel===6)value=raw/5;
     if(sender===4)return;
-    if(channel===12){setTelemetry("liveBattery",raw,"%");setTelemetry("homeBattery",raw,"%");$("batterySource").textContent="Echt via Specialized TCU1";$("batterySub").textContent="Echt via Specialized TCU1";$("batteryMeter").style.width=Math.max(0,Math.min(100,raw))+"%";}
+    if(channel===12){setTelemetry("liveBattery",raw,"%");setTelemetry("homeBattery",raw,"%");$("batterySource").textContent="Echt via Specialized";$("batterySub").textContent="Echt via Specialized";$("batteryMeter").style.width=Math.max(0,Math.min(100,raw))+"%";}
     if(channel===0)setTelemetry("bikeBatteryCapacity",value,"Wh");
     if(channel===1)setTelemetry("bikeBatteryRemaining",value,"Wh");
     if(channel===2)setTelemetry("bikeBatteryHealth",value,"%");
