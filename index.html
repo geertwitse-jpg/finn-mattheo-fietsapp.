@@ -48,7 +48,8 @@ header{display:flex;align-items:center;justify-content:space-between;padding:19p
 <div class="stat"><small>Ritafstand</small><div class="value" id="liveDistance">0.00 <em>km</em></div><small>GPS-berekend</small></div>
 <div class="stat"><small>Rijtijd</small><div class="value" id="liveTime">00:00</div><small>Huidige rit</small></div>
 </div>
-<div class="panel" style="margin-top:14px"><div class="row"><h2>Specialized · livegegevens</h2><span id="specializedState" class="pill">Niet herkend</span></div><p id="specializedMessage">Verbind je Levo om echte fietsgegevens uit te lezen. GPS-gegevens blijven apart weergegeven.</p><div class="telemetryGrid" style="margin-top:12px"><div class="telemetryCell"><small>Fietssnelheid</small><b id="bikeSpeed">— <em>km/u</em></b></div><div class="telemetryCell"><small>Ondersteuning</small><b id="bikeAssist">—</b></div><div class="telemetryCell"><small>Trapfrequentie</small><b id="bikeCadence">— <em>RPM</em></b></div><div class="telemetryCell"><small>Motorvermogen</small><b id="bikeMotorPower">— <em>W</em></b></div><div class="telemetryCell"><small>Jouw trapvermogen</small><b id="bikeRiderPower">— <em>W</em></b></div><div class="telemetryCell"><small>Kilometerteller</small><b id="bikeOdometer">— <em>km</em></b></div><div class="telemetryCell"><small>Accugezondheid</small><b id="bikeBatteryHealth">— <em>%</em></b></div><div class="telemetryCell"><small>Accutemperatuur</small><b id="bikeBatteryTemp">— <em>°C</em></b></div><div class="telemetryCell"><small>Accuspanning</small><b id="bikeBatteryVoltage">— <em>V</em></b></div><div class="telemetryCell"><small>Accustroom</small><b id="bikeBatteryCurrent">— <em>A</em></b></div></div></div>
+<div class="panel" style="margin-top:14px"><div class="row"><h2>Specialized · livegegevens</h2><span id="specializedState" class="pill">Niet herkend</span></div><p id="specializedMessage">Verbind je Levo om echte fietsgegevens uit te lezen. GPS-gegevens blijven apart weergegeven.</p><div class="telemetryGrid" style="margin-top:12px"><div class="telemetryCell"><small>Fietssnelheid</small><b id="bikeSpeed">— <em>km/u</em></b></div><div class="telemetryCell"><small>Ondersteuning</small><b id="bikeAssist">—</b></div><div class="telemetryCell"><small>Trapfrequentie</small><b id="bikeCadence">— <em>RPM</em></b></div><div class="telemetryCell"><small>Motorvermogen</small><b id="bikeMotorPower">— <em>W</em></b></div><div class="telemetryCell"><small>Jouw trapvermogen</small><b id="bikeRiderPower">— <em>W</em></b></div><div class="telemetryCell"><small>Kilometerteller</small><b id="bikeOdometer">— <em>km</em></b></div><div class="telemetryCell"><small>Accugezondheid</small><b id="bikeBatteryHealth">— <em>%</em></b></div><div class="telemetryCell"><small>Accutemperatuur</small><b id="bikeBatteryTemp">— <em>°C</em></b></div><div class="telemetryCell"><small>Accuspanning</small><b id="bikeBatteryVoltage">— <em>V</em></b></div><div class="telemetryCell"><small>Accustroom</small><b id="bikeBatteryCurrent">— <em>A</em></b></div><div class="telemetryCell"><small>Accucapaciteit</small><b id="bikeBatteryCapacity">— <em>Wh</em></b></div><div class="telemetryCell"><small>Resterende energie</small><b id="bikeBatteryRemaining">— <em>Wh</em></b></div><div class="telemetryCell"><small>Laadcycli</small><b id="bikeBatteryCycles">—</b></div><div class="telemetryCell"><small>Motortemperatuur</small><b id="bikeMotorTemp">— <em>°C</em></b></div><div class="telemetryCell"><small>Eco-ondersteuning</small><b id="bikeEcoPct">— <em>%</em></b></div><div class="telemetryCell"><small>Trail-ondersteuning</small><b id="bikeTrailPct">— <em>%</em></b></div><div class="telemetryCell"><small>Turbo-ondersteuning</small><b id="bikeTurboPct">— <em>%</em></b></div><div class="telemetryCell"><small>Wielomtrek</small><b id="bikeWheelSize">— <em>mm</em></b></div><div class="telemetryCell"><small>Acceleratiegevoeligheid</small><b id="bikeAcceleration">— <em>%</em></b></div></div></div>
+<div class="panel" style="margin-top:14px"><div class="row"><h2>Ondersteuningsstand</h2><span id="assistControlState" class="pill">Niet beschikbaar</span></div><p>Kies een normale fabrieksstand. De keuze wordt rechtstreeks naar de fiets gestuurd en daarna terug uitgelezen.</p><div class="grid2" style="margin-top:12px"><button class="btn small" data-assist-level="0" disabled>UIT</button><button class="btn small" data-assist-level="1" disabled>ECO</button><button class="btn small" data-assist-level="2" disabled>TRAIL</button><button class="btn small" data-assist-level="3" disabled>TURBO</button></div><p class="tiny" id="assistControlMessage">Beschikbaar zodra het TCU1-protocol en de schrijfservice zijn bevestigd.</p></div>
 <div class="panel" style="margin-top:14px"><div class="row"><h2>GPS-ritregistratie</h2><span id="rideState" class="pill">Klaar</span></div><p>Registreer snelheid, afstand en route via de GPS van je telefoon.</p><div class="grid2" style="margin-top:13px"><button id="startRide" class="btn mint">▶ Start rit</button><button id="finishRide" class="btn danger" disabled>■ Beëindig rit</button></div><svg class="trackLine" viewBox="0 0 320 145" preserveAspectRatio="none"><polyline id="routeLine" points=""/><circle id="routeDot" cx="10" cy="130" r="4"/></svg><p class="tiny" id="routeHint">Je route verschijnt zodra GPS-posities binnenkomen.</p></div>
 <div class="panel"><div class="row"><h2>Bluetooth-fietsverbinding</h2><span id="bleState" class="pill warn">Niet verbonden</span></div><p id="bleMessage">Controleer of beacio actief is in Safari en kies daarna je fiets.</p><button id="checkBluetooth" class="btn full">Controleer Bluetooth-ondersteuning</button><button id="connectBike" class="btn primary full" style="margin-top:8px">Verbind met mijn fiets</button><button id="disconnectBike" class="btn full" style="margin-top:8px" disabled>Verbinding verbreken</button><div class="notice" style="margin-top:12px"><b>beacio instellen op iPhone</b><br>1. Installeer beacio via de App Store.<br>2. Open deze website in Safari (niet in een ingebouwde browser).<br>3. Tik op <b>aA</b> in de adresbalk → <b>Beheer extensies</b> → zet beacio aan.<br>4. Kies bij beacio <b>Sta toe op elke website</b>.<br>5. Keer terug naar deze pagina en tik op ‘Controleer Bluetooth-ondersteuning’.<br><a href="https://apps.apple.com/be/app/beacio/id6761301368" target="_blank" rel="noopener" style="color:#a9caff">Download beacio</a></div></div>
 <div class="notice">De Specialized-uitlezing gebruikt het gedocumenteerde TCU1-leesprotocol. Instellingen en assistentiebediening worden pas geactiveerd na aparte controle op de fiets. Er worden geen snelheidsbegrenzingen opgevoerd of omzeild.</div>
@@ -68,7 +69,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:19p
 <nav id="nav" class="nav hidden"><button class="active" data-page="home"><i>⌂</i>Home</button><button data-page="live"><i>◉</i>LIVE</button><button data-page="rides"><i>↗</i>Ritten</button><button data-page="settings"><i>⚙</i>Instellingen</button></nav>
 <script>
 const bikes={Finn:{name:"SUPER73 S2",sub:"Modeljaar 2024 · 48V · 720Wh",emoji:"🚲"},Mattheo:{name:"Turbo Levo 2019",sub:"Specialized 2.1 · 500Wh",emoji:"🚵"}};
-const $=id=>document.getElementById(id);let user="Finn",device=null,batteryChar=null,watchId=null,timerId=null,ride=null,positions=[],deferredInstall=null,lastPosition=null,specializedProfile=null,specializedWriteChar=null,specializedReadChar=null,specializedDataChar=null,specializedPollTimer=null,specializedPollBusy=false;
+const $=id=>document.getElementById(id);let user="Finn",device=null,batteryChar=null,watchId=null,timerId=null,ride=null,positions=[],deferredInstall=null,lastPosition=null,specializedProfile=null,specializedWriteChar=null,specializedReadChar=null,specializedCommandChar=null,specializedDataChar=null,specializedPollTimer=null,specializedPollBusy=false;
 const store={get(k,d){try{return JSON.parse(localStorage.getItem("fm_"+k))??d}catch{return d}},set(k,v){localStorage.setItem("fm_"+k,JSON.stringify(v))}};
 function hashPin(pin){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(pin+"|fm-local-v1")).then(b=>Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,"0")).join(""))}
 function show(page){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===page));document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===page));}
@@ -117,32 +118,89 @@ async function inspectGatt(server){
 function setTelemetry(id,value,unit=""){const el=$(id);if(!el||value===null||value===undefined||Number.isNaN(Number(value)))return;el.innerHTML=String(value)+(unit?' <em>'+unit+'</em>':'')}
 function tcuUuid(n){return "000000"+n.toString(16).padStart(2,"0")+"-0000-4b49-4e4f-525441474947"}
 function showLegacyMessage(input){
-  const data=Array.from(input);while(data.length>2&&data[data.length-1]===255)data.pop();if(data.length<3)return;
-  const sender=data[0],channel=data[1],raw=data.slice(2).reduce((n,b,i)=>n+(b<<(8*i)),0);
-  let name=null,value=raw;
-  if(sender===0){const m={0:["batteryCapacity",raw*1.1111],1:["batteryRemaining",raw*1.1111],2:["batteryHealth",raw],3:["batteryTemp",raw],4:["batteryCycles",raw],5:["batteryVoltage",raw/5+20],6:["batteryCurrent",raw/5],12:["batteryPercent",raw]};if(m[channel])[name,value]=m[channel]}
-  if(sender===1){const m={0:["riderPower",raw],1:["cadence",raw/10],2:["speed",raw/10],4:["odometer",raw/1000],5:["assist",raw],7:["motorTemp",raw],12:["motorPower",raw]};if(m[channel])[name,value]=m[channel]}
-  if(!name)return;
-  if(name==="batteryPercent"){setTelemetry("liveBattery",Math.round(value),"%");setTelemetry("homeBattery",Math.round(value),"%");$("batterySource").textContent="Echt via Specialized TCU1";$("batterySub").textContent="Echt via Specialized TCU1";$("batteryMeter").style.width=Math.max(0,Math.min(100,value))+"%"}
-  if(name==="speed")setTelemetry("bikeSpeed",value.toFixed(1),"km/u");
-  if(name==="cadence")setTelemetry("bikeCadence",value.toFixed(1),"RPM");
-  if(name==="riderPower")setTelemetry("bikeRiderPower",Math.round(value),"W");
-  if(name==="motorPower")setTelemetry("bikeMotorPower",Math.round(value),"W");
-  if(name==="odometer")setTelemetry("bikeOdometer",value.toFixed(2),"km");
-  if(name==="batteryHealth")setTelemetry("bikeBatteryHealth",Math.round(value),"%");
-  if(name==="batteryTemp")setTelemetry("bikeBatteryTemp",Math.round(value),"°C");
-  if(name==="batteryVoltage")setTelemetry("bikeBatteryVoltage",value.toFixed(1),"V");
-  if(name==="batteryCurrent")setTelemetry("bikeBatteryCurrent",value.toFixed(1),"A");
-  if(name==="assist"){const labels=["UIT","ECO","TRAIL","TURBO"];setTelemetry("bikeAssist",labels[value]||("Stand "+value))}
-  $("specializedMessage").textContent="De waarden worden rechtstreeks van de Specialized-fiets gelezen via Bluetooth.";
+  const bytes=Array.from(input||[]);if(bytes.length<3)return;
+  const sender=bytes[0],channel=bytes[1];
+  const sizes={"0:0":2,"0:1":2,"0:2":1,"0:3":1,"0:4":2,"0:5":1,"0:6":1,"0:12":1,"1:0":2,"1:1":2,"1:2":2,"1:4":4,"1:5":2,"1:7":1,"1:12":2,"1:16":3,"1:21":1,"2:0":2,"2:3":1,"2:4":1,"2:5":1,"2:6":1,"2:7":2};
+  const size=sizes[sender+":"+channel];if(!size)return;
+  const payload=bytes.slice(2,2+size);if(payload.length!==size)return;
+  let raw=0;for(let i=0;i<payload.length;i++)raw+=payload[i]*Math.pow(256,i);
+  let value=raw;
+  if(sender===0||sender===4){
+    if(channel===0||channel===1)value=Math.round(raw*1.1111);
+    if(channel===5)value=raw/5+20;if(channel===6)value=raw/5;
+    if(sender===4)return;
+    if(channel===12){setTelemetry("liveBattery",raw,"%");setTelemetry("homeBattery",raw,"%");$("batterySource").textContent="Echt via Specialized TCU1";$("batterySub").textContent="Echt via Specialized TCU1";$("batteryMeter").style.width=Math.max(0,Math.min(100,raw))+"%";}
+    if(channel===0)setTelemetry("bikeBatteryCapacity",value,"Wh");
+    if(channel===1)setTelemetry("bikeBatteryRemaining",value,"Wh");
+    if(channel===2)setTelemetry("bikeBatteryHealth",value,"%");
+    if(channel===3)setTelemetry("bikeBatteryTemp",value,"°C");
+    if(channel===4)setTelemetry("bikeBatteryCycles",value);
+    if(channel===5)setTelemetry("bikeBatteryVoltage",value.toFixed(1),"V");
+    if(channel===6)setTelemetry("bikeBatteryCurrent",value.toFixed(1),"A");
+  }
+  if(sender===1){
+    if(channel===1||channel===2)value=raw/10;if(channel===4)value=raw/1000;
+    if(channel===0)setTelemetry("bikeRiderPower",Math.round(value),"W");
+    if(channel===1)setTelemetry("bikeCadence",value.toFixed(1),"RPM");
+    if(channel===2)setTelemetry("bikeSpeed",value.toFixed(1),"km/u");
+    if(channel===4)setTelemetry("bikeOdometer",value.toFixed(2),"km");
+    if(channel===5){const labels=["UIT","ECO","TRAIL","TURBO"];setTelemetry("bikeAssist",labels[raw]||("Stand "+raw));}
+    if(channel===7)setTelemetry("bikeMotorTemp",value,"°C");
+    if(channel===12)setTelemetry("bikeMotorPower",Math.round(value),"W");
+    if(channel===16){setTelemetry("bikeEcoPct",payload[0],"%");setTelemetry("bikeTrailPct",payload[1],"%");setTelemetry("bikeTurboPct",payload[2],"%");}
+  }
+  if(sender===2){
+    if(channel===0)setTelemetry("bikeWheelSize",raw,"mm");
+    if(channel===3)setTelemetry("bikeEcoPct",raw,"%");
+    if(channel===4)setTelemetry("bikeTrailPct",raw,"%");
+    if(channel===5)setTelemetry("bikeTurboPct",raw,"%");
+    if(channel===7)setTelemetry("bikeAcceleration",((raw-3000)/60).toFixed(1),"%");
+  }
+  $("specializedMessage").textContent="De beschikbare waarden worden rechtstreeks uitgelezen via het Specialized TCU1-protocol.";
 }
 async function writeBleValue(ch,bytes){const d=new Uint8Array(bytes);if(ch.properties.writeWithoutResponse&&ch.writeValueWithoutResponse)return ch.writeValueWithoutResponse(d);if(ch.properties.write&&ch.writeValueWithResponse)return ch.writeValueWithResponse(d);if(ch.writeValue)return ch.writeValue(d);throw new Error("Geen ondersteunde schrijfmodus op de aanvraag-kenmerk.")}
 async function readTcu1Value(sender,channel){await writeBleValue(specializedWriteChar,[sender,channel]);await new Promise(r=>setTimeout(r,110));const v=await specializedReadChar.readValue();const bytes=Array.from(new Uint8Array(v.buffer,v.byteOffset,v.byteLength));if(bytes[0]===sender&&bytes[1]===channel)showLegacyMessage(bytes)}
-async function pollTcu1(){if(specializedPollBusy||!device?.gatt?.connected||!specializedWriteChar||!specializedReadChar)return;specializedPollBusy=true;const fields=[[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[0,6],[0,12],[1,0],[1,1],[1,2],[1,4],[1,5],[1,7],[1,12]];try{for(const [a,b] of fields){if(!device?.gatt?.connected)break;try{await readTcu1Value(a,b)}catch(e){console.debug("TCU1 veld niet beschikbaar",a,b,e)}}}finally{specializedPollBusy=false}}
-async function startSpecializedTelemetry(server){try{const req=await server.getPrimaryService(tcuUuid(1));specializedWriteChar=await req.getCharacteristic(tcuUuid(0x21));specializedReadChar=await req.getCharacteristic(tcuUuid(0x11));const ds=await server.getPrimaryService(tcuUuid(3));specializedDataChar=await ds.getCharacteristic(tcuUuid(0x13));try{await specializedDataChar.startNotifications();specializedDataChar.addEventListener("characteristicvaluechanged",e=>{const v=e.target.value;showLegacyMessage(new Uint8Array(v.buffer,v.byteOffset,v.byteLength))})}catch(e){console.debug("TCU1 meldingen niet beschikbaar",e)}$("specializedState").textContent="TCU1 verbonden";$("specializedState").className="pill good";$("specializedMessage").textContent="TCU1 herkend. De app leest nu de beschikbare accugegevens en motor-/rijgegevens uit.";await pollTcu1();specializedPollTimer=setInterval(pollTcu1,7000)}catch(e){$("specializedState").textContent="Uitlezing niet gestart";$("specializedState").className="pill warn";$("specializedMessage").textContent="De Specialized-dienst is gevonden, maar uitlezen mislukte: "+e.message}}
+async function pollTcu1(){if(specializedPollBusy||!device?.gatt?.connected||!specializedWriteChar||!specializedReadChar)return;specializedPollBusy=true;const fields=[[0,0],[0,1],[0,2],[0,3],[0,4],[0,5],[0,6],[0,12],[1,0],[1,1],[1,2],[1,4],[1,5],[1,7],[1,12],[2,0],[2,3],[2,4],[2,5],[2,7]];try{for(const [a,b] of fields){if(!device?.gatt?.connected)break;try{await readTcu1Value(a,b)}catch(e){console.debug("TCU1 veld niet beschikbaar",a,b,e)}}}finally{specializedPollBusy=false}}
+async function startSpecializedTelemetry(server){
+  try{
+    const req=await server.getPrimaryService(tcuUuid(1));
+    specializedWriteChar=await req.getCharacteristic(tcuUuid(0x21));
+    specializedReadChar=await req.getCharacteristic(tcuUuid(0x11));
+    const commandService=await server.getPrimaryService(tcuUuid(2));
+    specializedCommandChar=await commandService.getCharacteristic(tcuUuid(0x22));
+    if(!specializedWriteChar.properties.writeWithoutResponse&&!specializedWriteChar.properties.write)throw new Error("De TCU1-aanvraagservice heeft geen ondersteunde schrijfmodus.");
+    if(!specializedReadChar.properties.read)throw new Error("De TCU1-antwoordservice is niet leesbaar.");
+    if(!specializedCommandChar.properties.writeWithoutResponse&&!specializedCommandChar.properties.write)throw new Error("De ondersteuningsbediening is niet schrijfbaar.");
+    $("specializedState").textContent="TCU1 verbonden";$("specializedState").className="pill good";
+    $("specializedMessage").textContent="TCU1 herkend. De app leest de beschikbare gegevens uit. Instellingen blijven beperkt tot de normale ondersteuningsstanden.";
+    $("assistControlState").textContent="Beschikbaar";$("assistControlState").className="pill good";
+    $("assistControlMessage").textContent="Normale ondersteuningsstanden zijn beschikbaar. Kies alleen wanneer je stilstaat.";
+    document.querySelectorAll("[data-assist-level]").forEach(b=>b.disabled=false);
+    await pollTcu1();specializedPollTimer=setInterval(pollTcu1,7000);
+  }catch(e){
+    $("specializedState").textContent="Uitlezing niet gestart";$("specializedState").className="pill warn";
+    $("specializedMessage").textContent="De Specialized-dienst is gevonden, maar de uitlezing of bedieningsservice ontbreekt: "+e.message;
+    $("assistControlState").textContent="Niet beschikbaar";$("assistControlMessage").textContent="De fiets ondersteunt deze bedieningsservice niet of de browser geeft er geen toegang toe.";
+    document.querySelectorAll("[data-assist-level]").forEach(b=>b.disabled=true);
+  }
+}
+async function setSpecializedAssist(level){
+  if(!device?.gatt?.connected||specializedProfile!=="TCU1"||!specializedCommandChar)return;
+  const labels=["UIT","ECO","TRAIL","TURBO"];if(!Number.isInteger(level)||level<0||level>3)return;
+  if(!confirm("Ondersteuningsstand wijzigen naar "+labels[level]+"? Doe dit alleen wanneer je stilstaat."))return;
+  try{
+    document.querySelectorAll("[data-assist-level]").forEach(b=>b.disabled=true);
+    $("assistControlMessage").textContent="Commando wordt verzonden…";
+    await writeBleValue(specializedCommandChar,[0x01,0x05,level]);
+    await new Promise(r=>setTimeout(r,250));await readTcu1Value(0x01,0x05);
+    $("assistControlMessage").textContent="Commando verzonden. Controleer de uitgelezen stand op het dashboard.";
+  }catch(e){$("assistControlMessage").textContent="De fiets heeft de wijziging niet bevestigd: "+e.message}
+  finally{document.querySelectorAll("[data-assist-level]").forEach(b=>b.disabled=!(device?.gatt?.connected&&specializedProfile==="TCU1"&&!!specializedCommandChar))}
+}
+document.querySelectorAll("[data-assist-level]").forEach(b=>b.addEventListener("click",()=>setSpecializedAssist(Number(b.dataset.assistLevel))));
 
 function checkBluetooth(){const ok=!!(navigator.bluetooth&&navigator.bluetooth.requestDevice);if(ok){$("bleMessage").textContent="Bluetooth-API beschikbaar. beacio of de browserbridge lijkt actief. Zet je fiets aan en tik op ‘Verbind met mijn fiets’.";$("bleState").textContent="Bluetooth beschikbaar";$("bleState").className="pill good"}else{$("bleMessage").textContent="Bluetooth is niet beschikbaar. Open deze HTTPS-website in Safari, schakel de beacio-extensie in via aA → Beheer extensies en kies ‘Sta toe op elke website’.";$("bleState").textContent="beacio niet actief";$("bleState").className="pill warn"}return ok} $("checkBluetooth").addEventListener("click",checkBluetooth);
-function onBleDisconnect(){if(specializedPollTimer){clearInterval(specializedPollTimer);specializedPollTimer=null}specializedProfile=null;specializedWriteChar=null;specializedReadChar=null;specializedDataChar=null;specializedPollBusy=false;$("specializedState").textContent="Niet verbonden";$("specializedState").className="pill";$("specializedMessage").textContent="Verbind je Levo om echte fietsgegevens uit te lezen.";device=null;batteryChar=null;$("bleState").textContent="Verbroken";$("bleState").className="pill warn";$("connectionPill").textContent="● Niet verbonden";$("connectionPill").className="pill warn";$("disconnectBike").disabled=true}
+function onBleDisconnect(){if(specializedPollTimer){clearInterval(specializedPollTimer);specializedPollTimer=null}specializedProfile=null;specializedWriteChar=null;specializedReadChar=null;specializedDataChar=null;specializedPollBusy=false;$("specializedState").textContent="Niet verbonden";$("specializedState").className="pill";$("specializedMessage").textContent="Verbind je Levo om echte fietsgegevens uit te lezen.";device=null;batteryChar=null;specializedCommandChar=null;document.querySelectorAll("[data-assist-level]").forEach(b=>b.disabled=true);$("assistControlState").textContent="Niet beschikbaar";$("assistControlState").className="pill";$("assistControlMessage").textContent="Verbind opnieuw met de Specialized om de normale ondersteuningsstanden te gebruiken.";$("bleState").textContent="Verbroken";$("bleState").className="pill warn";$("connectionPill").textContent="● Niet verbonden";$("connectionPill").className="pill warn";$("disconnectBike").disabled=true}
 $("connectBike").addEventListener("click",connectBike);$("disconnectBike").addEventListener("click",()=>{if(device?.gatt?.connected)device.gatt.disconnect();onBleDisconnect()});
 $("resetPin").addEventListener("click",()=>{if(confirm("Het lokale wachtwoord voor "+user+" verwijderen? Je stelt hem daarna opnieuw in.")){localStorage.removeItem("fm_pin_"+user);alert("Wachtwoord verwijderd. Log uit om een nieuw wachtwoord in te stellen.")}});
 $("units").value=units;$("units").addEventListener("change",e=>{units=e.target.value;store.set("units",units);renderRides();if(ride)updateRideUI()});
